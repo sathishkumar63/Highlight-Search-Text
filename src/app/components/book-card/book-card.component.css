@@ -1,0 +1,33 @@
+.book-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1.5px solid #b4b4b4;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.book-card__body {
+  display: grid;
+  grid-template-columns: 75% 10%;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.book-card__text {
+  margin: 0px;
+  line-height: 24px;
+}
+
+.book-card__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-card__action button {
+  color: #ffffff;
+  background: rgba(0, 93, 232, 1);
+}

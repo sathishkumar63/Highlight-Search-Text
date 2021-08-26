@@ -1,3 +1,6 @@
 <app-header></app-header>
-
-<app-book-card></app-book-card>
+<div class="book-lists-container">
+  <div class="book-lists" *ngFor="let book of bookLists">
+    <app-book-card [bookInfo]="book"></app-book-card>
+  </div>
+</div>

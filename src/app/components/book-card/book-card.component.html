@@ -1,3 +1,11 @@
-<p>
-  book-card works!
-</p>
+<div class="book-card">
+  <div class="book-card__body">
+    <div class="book-card__info">
+      <p class="book-card__text" [innerHtml]="bookInfo?.title"></p>
+      <p class="book-card__text" [innerHtml]="bookInfo?.description"></p>
+    </div>
+    <div class="book-card__action">
+      <button mat-flat-button >Open</button>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IBookLists, mockBookLists } from '../../models';
 
 @Component({
   selector: 'app-book-lists',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-lists.component.css']
 })
 export class BookListsComponent implements OnInit {
+  bookLists: IBookLists[] = mockBookLists;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
