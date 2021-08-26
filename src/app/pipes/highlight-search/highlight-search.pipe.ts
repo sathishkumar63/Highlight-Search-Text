@@ -21,7 +21,7 @@ export class HighlightSearchPipe implements PipeTransform {
 
     const result = value.replace(
       regex,
-      `<span class='highlight'>${match[0]}</span>`
+      `<mark class='highlight'>${match[0]}</mark>`
     );
     return this.sanitizer.bypassSecurityTrustHtml(result);
   }
