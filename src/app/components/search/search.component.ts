@@ -8,7 +8,7 @@ import { debounceTime, Subject, Subscription } from 'rxjs';
 })
 export class SearchComponent implements OnInit, OnDestroy {
   @Input() searchText: string;
-  @Output() notifySearchEvent = new EventEmitter<string>();
+  @Output() notifySearchChange = new EventEmitter<string>();
   subscriptions: Subscription = new Subscription();
   searchFieldUpdate = new Subject<string>();
 
@@ -33,12 +33,12 @@ export class SearchComponent implements OnInit, OnDestroy {
   }
 
   onSearch(value: string) {
-    this.notifySearchEvent.emit(value);
+    this.notifySearchChange.emit(value);
   }
 
   onClearSearch() {
     this.searchText = '';
-    this.notifySearchEvent.emit('');
+    this.notifySearchChange.emit('');
   }
 
   ngOnDestroy() {

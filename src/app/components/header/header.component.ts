@@ -6,13 +6,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() notifySearch = new EventEmitter<string>();
+  @Output() searched = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit() {}
 
   onSearchChange(value: string) {
-    this.notifySearch.emit(value);
+    this.searched.emit(value);
   }
 }

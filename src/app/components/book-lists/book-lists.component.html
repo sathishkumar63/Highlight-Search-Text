@@ -1,6 +1,6 @@
-<app-header (notifySearch)="onSearch($event)"></app-header>
+<app-header (searched)="onSearched($event)"></app-header>
 <div class="book-lists-container">
-  <div class="book-lists" *ngFor="let book of bookLists  | filter: searchText">
-    <app-book-card [bookInfo]="book"></app-book-card>
+  <div class="book-lists" *ngFor="let book of bookLists | filter: searchTerm">
+    <app-book-card [bookInfo]="book" [searchedText]="searchTerm"></app-book-card>
   </div>
 </div>

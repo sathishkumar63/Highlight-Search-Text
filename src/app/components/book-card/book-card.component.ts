@@ -8,6 +8,7 @@ import { IBookLists } from '../../models';
 })
 export class BookCardComponent implements OnInit {
   @Input() bookInfo: IBookLists;
+  @Input() searchedText: string;
 
   constructor() { }
 
