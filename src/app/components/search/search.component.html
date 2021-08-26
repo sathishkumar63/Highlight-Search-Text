@@ -1,0 +1,17 @@
+<div class="search-bar">
+  <input
+  type="text"
+  class="search-bar__input"
+  [(ngModel)]="searchText"
+  (ngModelChange)="searchFieldUpdate.next(searchText);"
+  aria-label="search"
+/>
+  <button
+    *ngIf="searchText"
+    class="search-bar__close-btn"
+    (click)="onClearSearch()"
+    aria-label="clear search bar"
+  >
+  <mat-icon aria-hidden="false" aria-label="close icon">close</mat-icon>
+  </button>
+</div>
