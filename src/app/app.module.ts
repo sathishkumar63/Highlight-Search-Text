@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { FilterPipe } from './pipes';
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import { MatButtonModule } from '@angular/material/button';
     HeaderComponent,
     SearchComponent,
     BookListsComponent,
-    BookCardComponent
+    BookCardComponent,
+    FilterPipe
   ],
   bootstrap: [AppComponent]
 })

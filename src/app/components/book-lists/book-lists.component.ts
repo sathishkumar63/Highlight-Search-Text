@@ -7,9 +7,14 @@ import { IBookLists, mockBookLists } from '../../models';
   styleUrls: ['./book-lists.component.css']
 })
 export class BookListsComponent implements OnInit {
+  searchText = null; 
   bookLists: IBookLists[] = mockBookLists;
 
   constructor() {}
 
   ngOnInit() {}
+
+  onSearch(value: string) {
+    this.searchText = value;
+  }
 }
