@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {
   BookCardComponent,
   BookListsComponent,
+  BookSearchResultComponent,
   HeaderComponent,
   SearchComponent
 } from './components';
@@ -29,6 +30,7 @@ import { FilterPipe, HighlightSearchPipe } from './pipes';
     SearchComponent,
     BookListsComponent,
     BookCardComponent,
+    BookSearchResultComponent,
     FilterPipe,
     HighlightSearchPipe
   ],

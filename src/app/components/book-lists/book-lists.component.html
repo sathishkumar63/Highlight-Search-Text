@@ -1,5 +1,8 @@
 <app-header (searched)="onSearched($event)"></app-header>
 <div class="book-lists-container">
+  <app-book-search-result *ngIf="searchTerm" [searchResultsCount]="(bookLists | filter: searchTerm).length"
+    [bookListsCount]="bookLists.length" [searchText]="searchTerm">
+  </app-book-search-result>
   <div class="book-lists" *ngFor="let book of bookLists | filter: searchTerm">
     <app-book-card [bookInfo]="book" [searchedText]="searchTerm"></app-book-card>
   </div>
