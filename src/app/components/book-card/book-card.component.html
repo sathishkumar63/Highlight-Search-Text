@@ -5,7 +5,9 @@
       <p class="book-card__text" [innerHtml]="bookInfo?.description | highlightSearch: searchedText"></p>
     </div>
     <div class="book-card__action">
-      <button mat-flat-button attr.aria-label="{{bookInfo?.name}}">Open</button>
+      <button mat-flat-button
+      [attr.aria-label]="'open ' + bookInfo?.name"
+      >Open</button>
     </div>
   </div>
 </div>
